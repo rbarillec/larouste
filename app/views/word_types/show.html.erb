@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @word_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @word_type.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_type_path(@word_type) %> |
+<%= link_to 'Back', word_types_path %>

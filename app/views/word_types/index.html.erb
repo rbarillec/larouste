@@ -1,0 +1,25 @@
+<h1>Listing word_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @word_types.each do |word_type| %>
+  <tr>
+    <td><%= word_type.name %></td>
+    <td><%= word_type.description %></td>
+    <td><%= link_to 'Show', word_type %></td>
+    <td><%= link_to 'Edit', edit_word_type_path(word_type) %></td>
+    <td><%= link_to 'Destroy', word_type, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Word type', new_word_type_path %>
